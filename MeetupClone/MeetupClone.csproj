@@ -190,6 +190,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Attendance.cs" />
     <Compile Include="Models\Attendee.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Event.cs" />
