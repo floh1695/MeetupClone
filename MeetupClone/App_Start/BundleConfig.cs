@@ -20,6 +20,11 @@ namespace MeetupClone
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+                      "~/scripts/angular.min.js",
+                      "~/scripts/angular-route.min.js",
+                      "~/scripts/app/main.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
