@@ -1,6 +1,7 @@
 ﻿using MeetupClone.Contexts;
 using MeetupClone.Models;
 using MeetupClone.Models.In;
+using MeetupClone.Models.Out;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -14,9 +15,9 @@ namespace MeetupClone.Controllers
     public class EventsController : ApiController
     {
         [HttpGet]
-        public IHttpActionResult SearchForCities([FromUri]CitySearch citySearch)
+        public IHttpActionResult SearchForCities([FromUri]EventSearchParameters citySearch)
         {
-            var results = new List<Event>();
+            var results = new List<EventSearchResult>();
             using (var db = new MeetupContext())
             {
                 var query = db.Events
@@ -32,7 +33,9 @@ namespace MeetupClone.Controllers
                         .Where(event_ => event_.Title.Contains(citySearch.Title));
                 }
 
-                results.AddRange(query);
+                results.AddRange(query
+                    .ToList()
+                    .Select(event_ => new EventSearchResult(event_)));
             }
             return Ok(results);
         }

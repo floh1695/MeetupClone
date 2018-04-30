@@ -5,7 +5,7 @@ using System.Web;
 
 namespace MeetupClone.Models.In
 {
-    public class CitySearch
+    public class EventSearchParameters
     {
         public string City { get; set; }
         public string Title { get; set; }

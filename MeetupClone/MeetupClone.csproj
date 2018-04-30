@@ -184,6 +184,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Contexts\MeetupContext.cs" />
+    <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -199,7 +200,8 @@
     <Compile Include="Models\Attendee.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Event.cs" />
-    <Compile Include="Models\In\CitySearch.cs" />
+    <Compile Include="Models\In\EventSearchParameters.cs" />
+    <Compile Include="Models\Out\EventSearchResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -215,6 +217,7 @@
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\app\main.js" />
+    <Content Include="Scripts\app\views\event.html" />
     <Content Include="Scripts\app\views\main.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

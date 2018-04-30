@@ -1,3 +1,19 @@
 ﻿<div>
-    Test
+    <span>City</span>
+    <input ng-model="searchData.city" />
+    
+    <span>Title</span>
+    <input ng-model="searchData.title" />
+    
+    <button ng-click="search()">Search</button>
+</div>
+
+<div ng-repeat="result in searchResults track by $index">
+    <h2>
+        <a href="#!/event/{{result.ID}}">{{result.Title}}</a>
+    </h2>
+    <h3>{{result.Tagline}}</h3>
+    <h4>{{result.LongDescription}}</h4>
+    <h5>Date: {{result.Date}}</h5>
+    <h5>Address: {{result.Address}}</h5>
 </div>
